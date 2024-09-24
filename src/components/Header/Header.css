@@ -1,0 +1,331 @@
+/********** Template CSS **********/
+:root {
+    --primary: #009CFF;
+    --secondary: #777777;
+    --light: #F8F8F8;
+    --dark: #252525;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+}
+
+
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    transition: .5s;
+    padding: 10px 0;
+
+}
+
+.btn.btn-primary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 10px 0;
+    color: #FFFFFF;
+    font-weight: 500;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--dark);
+}
+
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 8px 0;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 8px;
+        border-top: 1px solid rgba(256, 256, 256, .1)
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        transition: .5s;
+        opacity: 0;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+#header-carousel .carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+#header-carousel .carousel-control-prev,
+#header-carousel .carousel-control-next {
+    width: 10%;
+}
+
+#header-carousel .carousel-control-prev-icon,
+#header-carousel .carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 500px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+#header-carousel .carousel-indicators [data-bs-target] {
+    width: 60px;
+    height: 60px;
+    text-indent: 0;
+    margin-bottom: 15px;
+    border: 2px solid #FFFFFF;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+#header-carousel .carousel-indicators [data-bs-target] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-header {
+    /* background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-1.jpg) center center no-repeat; */
+    background-size: cover;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: var(--secondary);
+}
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 4px;
+    left: -60px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title.text-start::before {
+    width: calc(100% + 40px);
+    right: 0;
+}
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    right: 0;
+}
+
+
+
+/*** Img Border ***/
+.img-border {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+}
+
+.img-border::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 3rem;
+    bottom: 3rem;
+    border: 5px solid var(--primary);
+    border-radius: 6px;
+}
+
+.img-border img {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: calc(100% - 3rem);
+    height: calc(100% - 3rem);
+    object-fit: cover;
+    border-radius: 6px;
+}
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* Adjust as needed */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure it covers the area */
+  }
+  .carousel-indicators button {
+    border: none; /* Remove button border */
+    padding: 0; /* Remove padding */
+}
+
+.carousel-indicators img {
+    width: 20px; /* Set the desired width */
+    height: 20px; /* Set the desired height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 5px; /* Optional: add rounded corners */
+}
+
+/* Marquee */
+.marquee {
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    background-color: #007bff; /* New background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: -11px;
+}
+
+  
+  .marquee-content {
+    white-space: nowrap;
+    position: absolute;
+    animation: marquee 50s linear infinite;
+    padding-left: 60px;
+    /* Added to create space for the "What's New" section */
+    padding-top: 10px;
+    /* Adjusted to vertically center the text */
+  }
+  
+  .whats-new {
+    font-weight: bold;
+    padding: 5px 80px;
+    font-size: 20px;
+    background-color: #3331d1;
+    border-right: 2px solid var(--color-3331d1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .rounded-r {
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+  }
+  
+  .fw-bolder {
+    color: rgb(51, 49, 209);
+  }
+  
+  @keyframes marquee {
+    0% {
+      left: 100%;
+    }
+  
+    100% {
+      left: -100%;
+    }
+  }
+  
+  .paused {
+    animation-play-state: paused;
+  }
+  

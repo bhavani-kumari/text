@@ -1,0 +1,215 @@
+/* Ensure the body uses flexbox layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+  }
+  
+  .banner {
+    flex: 0 0 auto; /* Prevent the banner from stretching */
+    position: relative; /* Position for absolute children */
+  }
+  
+  .banner-image {
+    width: 100%; /* Make sure the image covers the width */
+    height: auto; /* Keep the aspect ratio */
+  }
+  
+  .banner-caption {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    color: white; /* Text color */
+  }
+  
+  .content {
+    flex: 1; /* Take available space */
+    overflow: auto; /* Enable scrolling */
+  }
+  
+  .footer {
+    width: 100%;
+    background: #061429; /* Same as your inline style */
+    color: white;
+    text-align: center;
+    margin: 0; /* Ensure no margin on the footer */
+    padding: 10px; /* Ensure no padding on the footer */
+  }
+  .main-heading {
+    font-size: 76px; /* Heading ka size badhaana */
+    font-weight: bold; /* Mota (bold) text */
+    color: #f2ecec; /* Aap color change kar sakte hain */
+    margin: 20px 0; /* Thoda space upar aur neeche */
+}
+.img-border {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+}
+
+.img-border::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 3rem;
+  bottom: 3rem;
+  border: 5px solid var(--primary);
+  border-radius: 6px;
+}
+
+.img-border img {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+/*** Facts ***/
+.fact-item {
+  transition: .5s;
+}
+
+.fact-item:hover {
+  margin-top: -10px;
+  background: #FFFFFF !important;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+}
+
+
+/*** Service ***/
+.service-item {
+  box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+  border: 1px solid transparent;
+  transition: .5s;
+}
+
+.service-item:hover {
+  margin-top: -10px;
+  box-shadow: none;
+  border: 1px solid #DEE2E6;
+}
+
+/*** Team ***/
+.team-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+}
+
+.team-item .team-text {
+    position: relative;
+    height: 65px;
+    overflow: hidden;
+}
+
+.team-item .team-title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.team-item:hover .team-title {
+    top: -65px;
+}
+
+.team-item .team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 65px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    transition: .5s;
+}
+
+.team-item .team-social .btn {
+    margin: 0 3px;
+}
+
+.team-item:hover .team-social {
+    top: 0;
+}
+.service-item {
+  position: relative;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.service-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: var(--bs-primary);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.service-item:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.service-item:hover .service-content,
+.service-item:hover .service-btn {
+  position: relative;
+  z-index: 2;
+}
+
+.service-item .service-content a,
+.service-item .service-content p {
+  transition: 0.5s;
+}
+
+.service-item:hover .service-content a:hover {
+  color: var(--bs-secondary);
+}
+
+.service-item:hover .service-content p {
+  color: var(--bs-white);
+} 
+
+.service-item .service-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bs-primary);
+  transition: 0.5s;
+}
+
+.service-item .service-btn i {
+  transition: 0.5s;
+}
+
+.service-item:hover .service-btn {
+  background: var(--bs-white);
+}
+
+.service-item:hover .service-btn i {
+  transform: rotate(360deg);
+  color: var(--bs-primary) !important;
+}
+  
+  

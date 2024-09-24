@@ -19,12 +19,12 @@ const Footer = () => {
             <p className="text-white mb-2">
               <i className="fa fa-envelope me-3"></i>info@example.com
             </p>
-            <div className="d-flex pt-2">
+            {/* <div className="d-flex pt-2">
               <a className="btn btn-square btn-outline-secondary rounded-circle me-1" href="#"><i className="fab fa-twitter"></i></a>
               <a className="btn btn-square btn-outline-secondary rounded-circle me-1" href="#"><i className="fab fa-facebook-f"></i></a>
               <a className="btn btn-square btn-outline-secondary rounded-circle me-1" href="#"><i className="fab fa-youtube"></i></a>
               <a className="btn btn-square btn-outline-secondary rounded-circle me-0" href="#"><i className="fab fa-linkedin-in"></i></a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links Section */}

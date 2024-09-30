@@ -60,4 +60,7 @@
 .quick-links a:hover {
   color: #007BFF; /* Change color on hover */
 }
+.btn {
+  margin-right: 10px; /* Adjust space as needed */
+}
 

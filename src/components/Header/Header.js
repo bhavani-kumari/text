@@ -1,151 +1,162 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Header/Header.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"; // Import social media icons
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"; 
+import { Link } from 'react-router-dom'; 
+
 
 const Header = () => {
+    // State for the spinner (if needed)
+   const [loading, setLoading] = useState(true);
+ 
+    // Simulate loading for demonstration
+    setTimeout(() => setLoading(false), 2000);
+
     return (
         <>
-          
-
-            {/* Topbar Start */}
-            <div className="container-fluid bg-light px-0 wow fadeIn" data-wow-delay="0.1s">
-                <div className="row gx-0 align-items-center d-none d-lg-flex">
-                    <div className="col-lg-6 px-5 text-start">
-                        <ol className="breadcrumb mb-0">
-                            <li className="breadcrumb-item"><a className="small text-secondary" href="#">Home</a></li>
-                            <li className="breadcrumb-item"><a className="small text-secondary" href="#">Career</a></li>
-                            <li className="breadcrumb-item"><a className="small text-secondary" href="#">Terms</a></li>
-                            <li className="breadcrumb-item"><a className="small text-secondary" href="#">Privacy</a></li>
-                        </ol>
+            {loading && (
+                <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                    <div className="spinner-border text-primary" style={{ width: "3rem", height: "3rem" }} role="status">
+                        <span className="sr-only">Loading...</span>
                     </div>
-                    <div className="col-lg-6 px-5 text-end">
-                        <small>Follow us:</small>
-                        <div className="h-100 d-inline-flex align-items-center">
-                            <a className="btn-square text-primary border-end rounded-0" href="#"><FaFacebook /></a>
-                            <a className="btn-square text-primary border-end rounded-0" href="#"><FaTwitter /></a>
-                            <a className="btn-square text-primary border-end rounded-0" href="#"><i className="fab fa-linkedin-in"></i></a>
-                            <a className="btn-square text-primary pe-0" href="#"><FaInstagram /></a>
+                </div>
+            )}
+            
+            {/* Topbar Start */}
+            <div className="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+                <div className="container">
+                    <div className="row gx-0 align-items-center">
+                        <div className="col-lg-8 text-center text-lg-start mb-lg-0">
+                            <div className="d-flex flex-wrap">
+                                <div className="border-end border-primary pe-3">
+                                    <Link to="#" className="text-muted small"><i className="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</Link>
+                                </div>
+                                <div className="ps-3">
+                                    <a href="mailto:example@gmail.com" className="text-muted small"><i className="fas fa-envelope text-primary me-2"></i>randhir3753@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 text-center text-lg-end">
+                            <div className="d-flex justify-content-end">
+                                <div className="d-flex border-end border-primary pe-3">
+                                    <a className="btn p-0 text-primary me-3" href="#"><FaFacebook /></a>
+                                    <a className="btn p-0 text-primary me-3" href="#"><FaTwitter /></a>
+                                    <a className="btn p-0 text-primary me-3" href="#"><FaInstagram /></a>
+                                    <a className="btn p-0 text-primary me-0" href="#"><FaLinkedin /></a>
+                                </div>
+                                <div className="dropdown ms-3">
+                                    <a href="#" className="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i className="fas fa-globe-europe text-primary me-2"></i> English</small></a>
+                                    <div className="dropdown-menu rounded">
+                                        <a href="#" className="dropdown-item">English</a>
+                                        <a href="#" className="dropdown-item">Bangla</a>
+                                        <a href="#" className="dropdown-item">French</a>
+                                        <a href="#" className="dropdown-item">Spanish</a>
+                                        <a href="#" className="dropdown-item">Arabic</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             {/* Topbar End */}
 
-            {/* Brand & Contact Start */}
-            <div className="container-fluid py-4 px-5 wow fadeIn" data-wow-delay="0.1s">
-                <div className="row align-items-center top-bar">
-                    <div className="col-lg-4 col-md-12 text-center text-lg-start">
-                        <a href="#" className="navbar-brand m-0 p-0">
-                            <h1 className="fw-bold text-primary m-0"><i className="">
-                            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/img/logo_1.png`} alt="About Us" style={{ width: '90px', height: 'auto' }}/>
-                            </i>ugan Softech</h1>
-                        </a>
-                    </div>
-                    <div className="col-lg-8 col-md-7 d-none d-lg-block">
-                        <div className="row">
-                            {[
-                                { icon: "far fa-clock", title: "Opening Hour", text: "Mon - Sat, 10:00 - 6:00" },
-                                { icon: "fa fa-phone", title: "Call Us", text: "+91 9931503744" },
-                                { icon: "far fa-envelope", title: "Email Us", text: "randhir3753@gmail.com" },
-                            ].map((item, index) => (
-                                <div className="col-4" key={index}>
-                                    <div className="d-flex align-items-center justify-content-end">
-                                        <div className="flex-shrink-0 btn-lg-square border rounded-circle">
-                                            <i className={item.icon + " text-primary"}></i>
-                                        </div>
-                                        <div className="ps-3">
-                                            <p className="mb-2">{item.title}</p>
-                                            <h6 className="mb-0">{item.text}</h6>
-                                        </div>
+            {/* Navbar & Hero Start */}
+            <div className="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+                <div className="container">
+                    <nav className="navbar navbar-expand-lg navbar-light"> 
+                        <Link to="#" className="navbar-brand p-0">
+                            <h1 className="text-primary mb-0"><i className=""><img className="flex-shrink-0 rounded-circle" src={`${process.env.PUBLIC_URL}/img/logo_1.png`}  style={{ width: '50px', height: '50px' }} /></i>ugan Softech</h1>
+                        </Link>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span className="fa fa-bars"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarCollapse">
+                            <div className="navbar-nav mx-0 mx-lg-auto">
+                                <Link to="/" className="nav-item nav-link active">Home</Link>
+                                <Link to="/about" className="nav-item nav-link">About</Link>
+                                <Link to="/services" className="nav-item nav-link">Services</Link>
+                                
+                                   
+                                        <Link to="/features" className="dropdown-item">Our Features</Link>
+                                        <Link to="/team" className="dropdown-item">Our team</Link>
+                                       
                                     </div>
                                 </div>
-                            ))}
+                               
+                                <div className="nav-btn px-3">
+                                    <button className="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search"></i></button>
+                                    <Link to="#" className="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> Contact Us</Link>
+                                </div>
+                            
+                        
+                        <div className="d-none d-xl-flex flex-shrink-0 ps-4">
+                            <Link to="#" className="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                                <i className="fa fa-phone-alt fa-2x"></i>
+                                <div className="position-absolute" style={{ top: "7px", right: "12px" }}>
+                                    <span><i className="fa fa-comment-dots text-secondary"></i></span>
+                                </div>
+                            </Link>
+                            <div className="d-flex flex-column ms-3">
+                                <span>Call to Our Experts</span>
+                                <a href="tel:+01234567890"><span className="text-dark">Free: +91 9931503744</span></a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            {/* Navbar & Hero End */}
+
+            {/* Modal Search Start */}
+            <div className="modal fade" id="searchModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-fullscreen">
+                    <div className="modal-content rounded-0">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body d-flex align-items-center bg-primary">
+                            <div className="input-group w-75 mx-auto d-flex">
+                                <input type="search" className="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1" />
+                                <span id="search-icon-1" className="btn bg-light border input-group-text p-3"><i className="fa fa-search"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {/* Brand & Contact End */}
-
-            {/* Navbar Start */}
-            <nav className="navbar navbar-expand-lg bg-primary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                <a href="#" className="navbar-brand ms-3 d-lg-none">MENU</a>
-                <button type="button" className="navbar-toggler me-3" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarCollapse">
-    <div className="navbar-nav ms-auto p-3 p-lg-0"> {/* Change from me-auto to ms-auto */}
-        <a href="index.html" className="nav-item nav-link active">Home</a>
-        <a href="about.html" className="nav-item nav-link">About Us</a>
-        <a href="service.html" className="nav-item nav-link">Services</a>
-        <a href="project.html" className="nav-item nav-link">Projects</a>
-        {/* Uncomment the dropdown if needed
-        <div className="nav-item dropdown">
-            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-            <div className="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
-                <a href="feature.html" className="dropdown-item">Features</a>
-                <a href="team.html" className="dropdown-item">Our Team</a>
-                <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-                <a href="404.html" className="dropdown-item">404 Page</a>
-            </div>
-        </div> */}
-    </div>
-    
-    <a href="https://htmlcodex.com/web-design-agency-html-template-pro" className="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Contact Us</a>
-</div>
-
-            </nav>
-            {/* Navbar End */}
+            
+            {/* Modal Search End */}
 
             {/* Carousel Start */}
-            <div className="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
-                <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-indicators">
-                        {[1, 2, 3].map((_, index) => (
-                            <button key={index} type="button" data-bs-target="#header-carousel" data-bs-slide-to={index} className={index === 0 ? "active" : ""} aria-current={index === 0 ? "true" : "false"} aria-label={`Slide ${index + 1}`}>
-                            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/img/banner.jpg`} alt="About Us" />
-                            </button>
-                        ))}
+            
+             <div className="header-carousel owl-carousel">
+                <div className="header-carousel-item bg-primary">
+                    <div className="carousel-caption">
+                        <div className="container">
+                            <div className="row g-4 align-items-center">
+                                <div className="col-lg-7 animated fadeInLeft">
+                                    <div className="text-sm-center text-md-start">
+                                        <h4 className="text-white text-uppercase fw-bold mb-4">Welcome To Our site</h4>
+                                        <h1 className="display-1 text-white mb-4">Sugan Softech</h1>
+                                      
+                                        <div className="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
+                                            <Link to="#" className="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2"><i className="fas fa-play-circle me-2"></i> Watch Video</Link>
+                                            <Link to="#" className="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2">Learn More</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-5 animated fadeInRight">
+                                    <div className="carousel-img" style={{ objectFit: "cover" }}>
+                                        <img src="img/destop.png" className="img-fluid w-100" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="carousel-inner">
-                     {["carousel-1", "carousel-2", "carousel-3"].map((carouselItem, index) => (
-                         <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>
-                         <img className="img-fluid" src={`${process.env.PUBLIC_URL}/img/6.jpeg`} alt="About Us"  style={{ width: '2000px', height: '500px' }} />
-                        <div className="wave wave1" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/img/wave.png)`, position: 'absolute', bottom: '0', left: '0', right: '0', height: 'auto', zIndex: '1' }}></div>
-                        <div className="carousel-caption">
-                        <div className="p-3" style={{ maxWidth: '900px', position: 'relative', zIndex: '2' }}>
-                              <h4 className="text-white text-uppercase mb-4 animated zoomIn">We Are Leader In</h4>
-                        <h1 className="display-1 text-white mb-0 animated zoomIn">Creative & Innovative Digital Solution</h1>
-                   </div>
-                   </div>
-                 </div>
-              ))}
-              </div>
-
-                    <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
                 </div>
-                <section>
-    <div class="w-100">
-      <div class="marquee" onmouseover="pauseMarquee()" onmouseout="resumeMarquee()">
-        <div class="whats-new rounded-r text-white">What's New:</div>
-        <div class="marquee-content">
-        <span class="fw-bolder" id="marquee item">Sugan Softech With 10 Years Of Experience</span>
-       
-        </div>
-      </div>
-    </div>
-
-  </section>
-            </div>
-            {/* Carousel End */}
-           
+                {/* Repeat for other carousel items... */}
+         </div> 
+            {/* Carousel End */} 
         </>
     );
 };

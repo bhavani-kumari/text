@@ -211,5 +211,237 @@ html, body {
   transform: rotate(360deg);
   color: var(--bs-primary) !important;
 }
-  
-  
+.project-card {
+  position: relative; /* Allow absolute positioning for the image */
+  overflow: hidden; /* Hide overflow to create the effect */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.project-image {
+  transition: transform 0.3s ease; /* Smooth transition for the image */
+}
+
+/* Scale the image on hover */
+.project-card:hover .project-image {
+  transform: scale(1.1); /* Increase the scale to 1.1 */
+  filter: brightness(1.1); /* Optional: Brighten the image on hover */
+}
+ 
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.1);
+  opacity: 0.8; /* Adjust this value for the desired effect */
+}
+
+.project-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-image-container:hover .project-title {
+  opacity: 1; /* Show title on hover */
+}
+.animate {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-50px); /* For images */
+}
+
+.hidden-text {
+  opacity: 0;
+  transform: translateX(50px); /* For text */
+}
+/*** Feature Start ***/
+.feature .feature-item {
+  border-radius: 10px;
+  background: var(--bs-white);
+  transition: 0.5s;
+}
+
+.feature .feature-item:hover {
+  background: var(--bs-primary);
+}
+
+.feature .feature-item .feature-icon {
+  position: relative;
+  width: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--bs-light);
+}
+
+.feature .feature-item:hover .feature-icon i {
+  z-index: 9;
+}
+
+.feature .feature-item .feature-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--bs-dark);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.feature .feature-item:hover .feature-icon::after {
+  height: 100%;
+}
+
+.feature .feature-item .feature-icon {
+  color: var(--bs-primary);
+}
+
+.feature .feature-item .feature-icon,
+.feature .feature-item h4,
+.feature .feature-item p {
+  transition: 0.5s;
+}
+
+.feature .feature-item:hover .feature-icon {
+  color: var(--bs-white);
+}
+.feature .feature-item:hover h4,
+.feature .feature-item:hover p {
+  color: var(--bs-white);
+}
+
+.feature .feature-item:hover a.btn {
+  background: var(--bs-white);
+  color: var(--bs-primary);
+}
+
+.feature .feature-item:hover a.btn:hover {
+  background: var(--bs-dark);
+  color: var(--bs-white);
+}
+/*** Feature End ***/
+.header-carousel .header-carousel-item {
+  height: 700px;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: var(--bs-light);
+  color: var(--bs-primary);
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.header-carousel .owl-nav .owl-prev {
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 30px;
+}
+.header-carousel .owl-nav .owl-next {
+  bottom: 30px;
+  right: 50%;
+  transform: translateX(-50%);
+  margin-right: 30px;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+  box-shadow: inset 0 0 100px 0 var(--bs-secondary);
+  color: var(--bs-white);
+}
+
+.header-carousel .header-carousel-item .carousel-caption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .2);
+  display: flex;
+  align-items: center;
+}
+/*** FAQs Start ***/
+.faq-section .accordion .accordion-item .accordion-header .accordion-button {
+  color: var(--bs-white);
+  background: rgba(1, 95, 201, .8);
+  font-size: 18px;
+}
+
+.faq-section .accordion .accordion-item .accordion-header .accordion-button.collapsed {
+  color: var(--bs-primary);
+  background: var(--bs-light);
+}
+/*** FAQs End ***/
+/*** Img Border ***/
+.img-border {
+  position: relative;
+  height: 400px; /* Adjust as necessary */
+  min-height: 400px;
+  width: 400px; /* Set fixed width for testing */
+}
+
+.img-border::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 3rem;
+  bottom: 3rem;
+ 
+  border-radius: 6px;
+  z-index: 1; /* Ensure it's above the image */
+}
+
+.img-border img {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  object-fit: cover;
+  border-radius: 6px;
+  z-index: 0; /* Ensure it's below the border */
+}
+
+.img-border {
+  display: inline-block; /* Taake border ka size control ho sake */
+  border: 5px solid #2444bb; /* Aap yahan border style customize kar sakte hain */
+  padding: 10px; /* Border aur image ke beech space ke liye */
+}
+
+.img-fluid {
+  display: block; /* Image ko block element banane ke liye, taake border ke neeche aaye */
+  max-width: 100%; /* Responsive design ke liye */
+  height: auto; /* Aspect ratio maintain karne ke liye */
+}

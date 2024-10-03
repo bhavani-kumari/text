@@ -445,34 +445,3 @@ html, body {
   max-width: 100%; /* Responsive design ke liye */
   height: auto; /* Aspect ratio maintain karne ke liye */
 }
-/*** Single Page Hero Header Start ***/
-.bg-breadcrumb {
-  position: relative;
-  overflow: hidden;
-  /* background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/bg-breadcrumb.jpg); */
-  background-position: center center;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
-  padding: px 0;
-  transition: 0.5s;
-}
-
-.bg-breadcrumb .breadcrumb {
-  position: relative;
-}
-
-.bg-breadcrumb .breadcrumb .breadcrumb-item a {
-  color: var(--bs-white);
-}
-
-.blue-input {
-  background-color: #e7f1ff; /* Light blue background */
-  border: 1px solid #007bff; /* Blue border */
-  color: #007bff; /* Blue text color */
-}
-
-.blue-input:focus {
-  border-color: #0056b3; /* Darker blue on focus */
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Blue shadow on focus */
-}
-

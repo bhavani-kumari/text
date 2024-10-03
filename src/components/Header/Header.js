@@ -78,15 +78,15 @@ const Header = () => {
                                 <Link to="/services" className="nav-item nav-link">Services</Link>
                                 
                                    
-                                        <Link to="/features" className="dropdown-item">Our Features</Link>
-                                        <Link to="/team" className="dropdown-item">Our team</Link>
+                                        <Link to="/OurFeatures" className="dropdown-item">Our Features</Link>
+                                        <Link to="/OurTeam" className="dropdown-item">Our team</Link>
                                        
                                     </div>
                                 </div>
                                
                                 <div className="nav-btn px-3">
                                     <button className="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search"></i></button>
-                                    <Link to="#" className="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> Contact Us</Link>
+                                    <Link to="/ContactUs" className="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> Contact Us</Link>
                                 </div>
                             
                         
@@ -129,7 +129,7 @@ const Header = () => {
 
             {/* Carousel Start */}
             
-             <div className="header-carousel owl-carousel">
+              <div className="header-carousel owl-carousel">
                 <div className="header-carousel-item bg-primary">
                     <div className="carousel-caption">
                         <div className="container">
@@ -153,9 +153,9 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
                 {/* Repeat for other carousel items... */}
-         </div> 
+          </div>  
             {/* Carousel End */} 
         </>
     );

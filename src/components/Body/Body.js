@@ -69,7 +69,7 @@ const FeaturesSection = () => {
       <div className="container py-5">
         <div className="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style={{ maxWidth: '800px' }}>
           <h4 className="text-primary">Our Features</h4>
-          <h1 className="display-4 mb-4">Insurance Provides You a Better Future</h1>
+          <h1 className="display-4 mb-4">Company Provides You a Better Future</h1>
           
         </div>
         <div className="row g-4">
@@ -155,7 +155,7 @@ const AboutSection = () => {
         <div className="row g-5 align-items-center">
           <div className={`col-lg-6 ${visible ? 'animate' : 'hidden'}`}>
           <div className="img-border">
-  <img className="img-fluid" src={`${process.env.PUBLIC_URL}/img/banner.jpg`} alt="About Us" />
+  <img className="img-fluid" src={`${process.env.PUBLIC_URL}/img/carousel-2.png`} alt="About Us" />
 </div>
 
           </div>
@@ -385,8 +385,11 @@ const Banner = () => {
         </div>
       </section>
 
+
+
+
       {/* Projects Section */}
-      {/* <section className="position-relative py-10" style={{ background: 'whitesmoke' }}>
+       <section className="position-relative py-10" style={{ background: 'whitesmoke' }}>
         <div className="container">
           <div className="row mb-lg-6">
             {projects.map((project) => (
@@ -410,7 +413,7 @@ const Banner = () => {
             ))}
           </div>
         </div>
-      </section> */}
+      </section> 
       <FeaturesSection />
 
     </>

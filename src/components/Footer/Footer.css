@@ -89,5 +89,41 @@
   border-top: 1px solid rgba(255, 255, 255, .08);
 }
 /*** copyright end ***/
+.copyright {
+  background-color: #333; /* Change this to your desired background color */
+}
+
+.text-body a {
+  color: #fff; /* Text color */
+}
+
+.text-body a:hover {
+  color: #ccc; /* Hover color */
+}
+.footer-links {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+}
+
+.footer-links a {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  margin-bottom: 10px; /* Space between links */
+}
+
+.footer-links a:hover {
+  color: #ccc; /* Change color on hover */
+}
+.footer-btn {
+  justify-content: flex-start; /* Align icons to the left */
+}
+
+.footer-btn a {
+  color: #fff; /* Icon color */
+}
+
+.footer-btn a:hover {
+  color: #ccc; /* Change icon color on hover */
+}
 
 

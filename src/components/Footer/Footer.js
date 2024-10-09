@@ -35,32 +35,46 @@ const Footer = () => {
             <div className="col-xl-9">
               <div className="mb-5">
                 <div className="row g-4">
-                  <div className="col-md-6 col-lg-6 col-xl-5">
-                    <div className="footer-item">
-                      <a href="index.html" className="p-0">
-                        <h3 className="text-white"><i className="far fa-handshake"></i> Contact Us</h3>
-                        <p className="text-white mb-3">If your culture doesn't like geeks, you are in real trouble.</p>
-                      </a>
-                      {/* <p className="text-white mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est. Lorem ipsum dolor sit amet, consectetur adipiscing...</p> */}
-                      <div className="footer-btn d-flex">
-                        <a className="btn btn-md-square rounded-circle me-3" href="#"><i className="fab fa-facebook-f"></i></a>
-                        <a className="btn btn-md-square rounded-circle me-3" href="#"><i className="fab fa-twitter"></i></a>
-                        <a className="btn btn-md-square rounded-circle me-3" href="#"><i className="fab fa-instagram"></i></a>
-                        <a className="btn btn-md-square rounded-circle me-0" href="#"><i className="fab fa-linkedin-in"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-6 col-xl-3">
-                    <div className="footer-item">
-                      <h4 className="text-white mb-4">Useful Links</h4>
-                      <a href="#"><i className="fas fa-angle-right me-2"></i> About Us</a>
-                      <a href="#"><i className="fas fa-angle-right me-2"></i> Features</a>
-                      <a href="#"><i className="fas fa-angle-right me-2"></i> Services</a>
-                      <a href="#"><i className="fas fa-angle-right me-2"></i> FAQ's</a>
-                      {/* <a href="#"><i className="fas fa-angle-right me-2"></i> Blogs</a> */}
-                      <a href="#"><i className="fas fa-angle-right me-2"></i> Contact</a>
-                    </div>
-                  </div>
+                <div className="col-md-6 col-lg-6 col-xl-5">
+    <div className="footer-item">
+        <a href="index.html" className="p-0">
+            <h3 className="text-white">
+                <i className="far fa-handshake"></i> Contact Us
+            </h3>
+            <p className="text-white mb-3">
+                If your culture doesn't like geeks, you are in real trouble.
+            </p>
+        </a>
+        <div className="footer-btn d-flex mt-999"> {/* Add margin top for spacing */}
+            <a className="btn btn-md-square rounded-circle me-3" href="#">
+                <i className="fab fa-facebook-f"></i>
+            </a>
+            <a className="btn btn-md-square rounded-circle me-3" href="#">
+                <i className="fab fa-twitter"></i>
+            </a>
+            <a className="btn btn-md-square rounded-circle me-3" href="#">
+                <i className="fab fa-instagram"></i>
+            </a>
+            <a className="btn btn-md-square rounded-circle me-0" href="#">
+                <i className="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+  {/* <div className="col-md-6 col-lg-6 col-xl-3">
+    <div className="footer-item">
+        <h4 className="text-white mb-4">Useful Links</h4>
+        <div className="footer-links">
+            <a href="#"><i className="fas fa-angle-right me-2"></i> About Us</a>
+            <a href="#"><i className="fas fa-angle-right me-2"></i> Features</a>
+            <a href="#"><i className="fas fa-angle-right me-2"></i> Services</a>
+            <a href="#"><i className="fas fa-angle-right me-2"></i> FAQ's</a>
+            <a href="#"><i className="fas fa-angle-right me-2"></i> Contact</a>
+        </div>
+    </div>
+</div> */}
+
                   <div className="col-md-6 col-lg-6 col-xl-4">
                     <div className="footer-item">
                       <h4 className="mb-4 text-white">Instagram</h4>
@@ -155,21 +169,22 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="container-fluid copyright py-4">
-        <div className="container">
-          <div className="row g-4 align-items-center">
-            <div className="col-md-6 text-center text-md-end mb-md-0">
-              <span className="text-body">
-                <a href="#" className="border-bottom text-white">
-                  <i className="fas fa-copyright text-light me-2"></i>Sugan Softech pvt.ltd.
-                </a>, All right reserved.
-              </span>
+    <div className="container">
+        <div className="row g-4 align-items-center">
+            <div className="col-md-6 text-center text-md-start mb-md-0">
+                <span className="text-body">
+                    <a href="#" className="border-bottom text-white">
+                        <i className="fas fa-copyright text-light me-2"></i>Sugan Softech pvt.ltd. All rights reserved.
+                    </a>
+                </span>
             </div>
-            <div className="col-md-6 text-center text-md-start text-body">
-              Designed By <a className="border-bottom text-white" href="https://htmlcodex.com">Sugan Softech</a>
+            <div className="col-md-6 text-center text-md-end text-body">
+                <a className="border-bottom text-white" href="https://htmlcodex.com">Designed By Sugan Softech</a>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
+
     </>
   );
 };

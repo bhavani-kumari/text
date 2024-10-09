@@ -2,11 +2,11 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Body from './components/Body/Body';
 import Footer from './components/Footer/Footer';
-import AboutUs from './components/AboutUs';
-import ServicesUs from './components/ServicesUs';
-import ContactUs from './components/ContactUs';
-import OurTeam from './components/OurTeam';
-import OurFeatures from './components/OurFeatures';
+import AboutUs from './components/About/AboutUs';
+import ServicesUs from './components/Services/ServicesUs';
+import ContactUs from './components/Contact/ContactUs';
+import OurTeam from './components/Team/OurTeam';
+import OurFeatures from './components/Features/OurFeatures';
 import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -31,23 +31,23 @@ function App() {
           element: <Body />,
         },
         {
-          path: "About", 
+          path: "/about", 
           element: <AboutUs />,
         },
          {
-          path: "Services", 
+          path: "/services", 
           element: <ServicesUs />,
         },
         {
-          path: "ContactUs", 
+          path: "/contactus", 
           element: <ContactUs />,
         },
         {
-          path: "OurFeatures", 
+          path: "/ourfeatures", 
           element: <OurFeatures />,
         },
         {
-          path: "OurTeam", 
+          path: "/ourteam", 
           element: <OurTeam />,
         },
 

@@ -17,18 +17,18 @@ const ServiceItem = ({ title, description, icon }) => (
   </div>
 );
 
-const ServicesUs = () => { 
+const ServicesUs = () => { // Corrected component name
   const services = [
     { title: 'Web Application', description: 'Description for Web Application', icon: 'fa-laptop' },
     { title: 'Desktop Application', description: 'Description for App Development', icon: 'fa-mobile-alt' },
     { title: 'GIS Survey', description: 'Description for GIS Survey', icon: 'fa-search' },
   ];
 
-  return ( 
+  return ( // Added return statement
     <>
       <section className="container-xxl py-5">
         <div className="container text-center mx-auto mb-5">
-          <h1 className="section-title bg-white text-center text-primary px-3">Services</h1>
+          <h6 className="section-title bg-white text-center text-primary px-3">Services</h6>
           <h1 className="display-6 mb-4">We Focus On Making The Best In All Sectors</h1>
         </div>
 

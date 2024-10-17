@@ -67,7 +67,7 @@ const Header = () => {
                     <FaLinkedin />
                   </a>
                 </div>
-                <div className="dropdown ms-3">
+                {/* <div className="dropdown ms-3">
                   <a
                     href="#"
                     className="dropdown-toggle text-dark"
@@ -95,7 +95,7 @@ const Header = () => {
                       Arabic
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -148,13 +148,13 @@ const Header = () => {
             </div>
 
             <div className="nav-btn px-3">
-              <button
+              {/* <button
                 className="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0"
                 data-bs-toggle="modal"
                 data-bs-target="#searchModal"
               >
                 <i className="fas fa-search"></i>
-              </button>
+              </button> */}
               <Link
                 to="/ContactUs"
                 className="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"
@@ -164,29 +164,29 @@ const Header = () => {
               </Link>
             </div>
 
-            <div className="d-none d-xl-flex flex-shrink-0 ps-4">
+            {/* <div className="d-none d-xl-flex flex-shrink-0 ps-4">
               <Link
                 to="#"
                 className="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
                 data-wow-delay=".9s"
-              >
-                <i className="fa fa-phone-alt fa-2x"></i>
-                <div
+              > */}
+                {/* <i className="fa fa-phone-alt fa-2x"></i> */}
+                {/* <div
                   className="position-absolute"
                   style={{ top: "7px", right: "12px" }}
                 >
                   <span>
                     <i className="fa fa-comment-dots text-secondary"></i>
                   </span>
-                </div>
-              </Link>
-              <div className="d-flex flex-column ms-3">
+                </div> */}
+              {/* </Link> */}
+              {/* <div className="d-flex flex-column ms-3">
                 <span>Call to Our Experts</span>
                 <a href="tel:+01234567890">
                   <span className="text-dark">Free: +91 9931503744</span>
                 </a>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </nav>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './ServicesUs.css'; // Ensure this path is correct
+import './ServicesUs.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -17,14 +17,14 @@ const ServiceItem = ({ title, description, icon }) => (
   </div>
 );
 
-const ServicesUs = () => { // Corrected component name
+const ServicesUs = () => { 
   const services = [
     { title: 'Web Application', description: 'Description for Web Application', icon: 'fa-laptop' },
     { title: 'Desktop Application', description: 'Description for App Development', icon: 'fa-mobile-alt' },
     { title: 'GIS Survey', description: 'Description for GIS Survey', icon: 'fa-search' },
   ];
 
-  return ( // Added return statement
+  return ( 
     <>
       <section className="container-xxl py-5">
         <div className="container text-center mx-auto mb-5">

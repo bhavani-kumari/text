@@ -533,7 +533,7 @@ const Banner = () => {
                 <div>
                     <div className="row g-4">
                         <div className="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
-                            <div className="contact-add-item">
+                            {/* <div className="contact-add-item">
                                 <div className="contact-icon text-primary mb-4">
                                     <i className="fas fa-map-marker-alt fa-2x"></i>
                                 </div>
@@ -541,10 +541,10 @@ const Banner = () => {
                                     <h4>Address</h4>
                                     <p className="mb-0">New Mackchund Toli,Samlog,Ranchi,JHARKHAND</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
-                            <div className="contact-add-item">
+                            {/* <div className="contact-add-item">
                                 <div className="contact-icon text-primary mb-4">
                                     <i className="fas fa-envelope fa-2x"></i>
                                 </div>
@@ -552,10 +552,10 @@ const Banner = () => {
                                     <h4>Mail Us</h4>
                                     <p className="mb-0">randhir3753@gmail.com</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
-                            <div className="contact-add-item">
+                            {/* <div className="contact-add-item">
                                 <div className="contact-icon text-primary mb-4">
                                     <i className="fa fa-phone-alt fa-2x"></i>
                                 </div>
@@ -563,10 +563,10 @@ const Banner = () => {
                                     <h4>Telephone</h4>
                                     <p className="mb-0">(+091)9935103744 </p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
-                            <div className="contact-add-item">
+                            {/* <div className="contact-add-item">
                                 <div className="contact-icon text-primary mb-4">
                                     <i className="fab fa-firefox-browser fa-2x"></i>
                                 </div>
@@ -574,7 +574,7 @@ const Banner = () => {
                                     <h4>YourSite@ex.com</h4>
                                     <p className="mb-0">(+091)9935103744</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

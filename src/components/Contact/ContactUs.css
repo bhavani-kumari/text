@@ -438,7 +438,7 @@
 
 
 /*** Service Start ***/
-.service .service-item {
+/* .service .service-item {
     border-radius: 10px;
 }
 .service .service-item .service-img {
@@ -557,7 +557,7 @@
 
 .service .service-item:hover .service-content::after {
     height: 100%;
-}
+} */
 /*** Service End ***/
 
 
